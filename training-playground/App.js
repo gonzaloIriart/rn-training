@@ -12,9 +12,9 @@ export default class App extends React.Component {
         width: "100%"
          }}>
            <View>
-          <Image style={{width: 250, height: 250}} source={require('./antique-art-cartoon-2250394.jpg')} />
+          <Image style={{width: "100%"}} source={require('./antique-art-cartoon-2250394.jpg')} />
           <Image style={{width: 250, height: 250}} source={{uri: 'https://www.cbc.ca/natureofthings/content/images/episodes/foxtales_1920.jpg'}}/>
-        </View>
+           </View>
         <Text style={{margin:15, textAlign:"center",fontSize:25}}>Text <Text style={{fontWeight: 'bold'}}>nesting </Text>123</Text>
         <View
         style={{          
