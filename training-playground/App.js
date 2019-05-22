@@ -5,7 +5,17 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <View
+        style={{
+          flexDirection: 'row',
+          height: 100,
+          padding: 10,
+        }}>
+        <View style={{backgroundColor: 'blue',borderColor:'black' ,borderWidth:3.5, flex: 0.3}} />
+        <View style={{backgroundColor: 'green', flex: 0.2}} />         
+      </View>
+      
+     
       </View>
     );
   }
