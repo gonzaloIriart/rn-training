@@ -1,22 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View,ScrollView } from 'react-native';
+import { StyleSheet, Text, View,ScrollView,Image } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
       
       <View style={styles.container}>
+        
         <View style ={{height:15}}></View>
         <ScrollView style={{flex: 1,
         width: "100%"
          }}>
+           <View>
+          <Image style={{width: 250, height: 250}} source={require('./antique-art-cartoon-2250394.jpg')} />
+          <Image style={{width: 250, height: 250}} source={{uri: 'https://www.cbc.ca/natureofthings/content/images/episodes/foxtales_1920.jpg'}}/>
+        </View>
         <Text style={{margin:15, textAlign:"center",fontSize:25}}>Text <Text style={{fontWeight: 'bold'}}>nesting </Text>123</Text>
         <View
         style={{          
           height: 300,
           flexDirection: "row",    
           padding: 10      
-        }}>
+        }}> 
         
         <View style={{backgroundColor: 'pink', flex: 0.3,margin:2}} />
         <View style={{backgroundColor: 'green', flex: 0.2,margin:2}} /> 
