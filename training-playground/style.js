@@ -3,33 +3,24 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
+      flexDirection: 'row',
       backgroundColor: 'blue',
-      alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'space-around',      
     },
     redBox: {
-        backgroundColor: 'red',
-        height: 100,
-        width: 100,
-        position: 'absolute',
-        top: 10,
-        left: 10
+        backgroundColor: 'red',        
+        width: 80,
+        height: 80,
     },
     purpleBox: {
-        backgroundColor: 'purple',
-        height: 200,
-        width: 200,
-        position: 'absolute',
-        top: 120,
-        left: 10
+        backgroundColor: 'purple',        
+        width: 80,
+        height: 80,
     },
     whiteBox: {
-        backgroundColor: 'white',
-        height: 300,
-        width: 300,
-        position: 'absolute',
-        top: 330,
-        left: 10
+        backgroundColor: 'white',   
+        width: 80,
+        height: 80,
     },
     borderStyle:{
         borderRadius: 10
