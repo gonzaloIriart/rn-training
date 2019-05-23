@@ -3,9 +3,9 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      flexDirection: 'row',
+      flexDirection: 'column',
       backgroundColor: 'blue',
-      justifyContent: 'space-around',      
+      justifyContent: 'space-between',      
     },
     redBox: {
         backgroundColor: 'red',        
