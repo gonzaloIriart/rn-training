@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput,TouchableOpacity } from 'react-native';
+import { StyleSheet,  View, TouchableOpacity } from 'react-native';
 import AppTextInput from './AppTextInput';
+import CustomButton from './CustomButton';
 
 export default class App extends React.Component {
 
@@ -8,6 +9,11 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
       <AppTextInput type = {'password'}></AppTextInput>
+      
+        <CustomButton type = {'primary'} isDisabled = {false} title = {'primary'}></CustomButton>
+        <CustomButton type = {'secondary'} isDisabled = {false} title = {'secondary'}></CustomButton>
+        <CustomButton type = {'primary'} isDisabled = {true} title = {'disabled'}></CustomButton>
+      
       </View>
     );
   }
