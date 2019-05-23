@@ -30,6 +30,9 @@ export const styles = StyleSheet.create({
         position: 'absolute',
         top: 330,
         left: 10
+    },
+    borderStyle:{
+        borderRadius: 10
     }
   });
   
