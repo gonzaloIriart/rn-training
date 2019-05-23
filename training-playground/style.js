@@ -1,31 +1,34 @@
-import {Platform,StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      flexDirection: 'column',
-      backgroundColor :Platform.OS === 'ios' ? 'grey':'green',
-      justifyContent: 'space-between',      
+      flex: 1,     
+      flexDirection: 'row', 
+      justifyContent:'space-between',
+      marginTop: 15    
     },
-    redBox: {
-        backgroundColor: 'red',        
-        width: 80,
-        height: 80,
+    containerText: {
+        width:'70%',
+        padding: 8
     },
-    purpleBox: {
-        backgroundColor: 'purple',        
-        width: 80,
-        height: 80,
-        marginLeft: 'auto',
+    containerImg: {
+        width:'30%',
+        height: 350,       
+        padding: 8,
+        justifyContent: 'center',
+        alignContent: 'center'
     },
-    whiteBox: {
-        backgroundColor: 'white',   
-        width: 80,
-        height: 80,
-        marginLeft: 'auto',
-        marginRight: 'auto'
+    title: {
+        marginTop: 15,
+        fontSize: 28,
     },
-    borderStyle:{
+    picture: {
+        
+    },
+    article: {
+       
+    },
+    social:{
         borderRadius: 10
     }
   });
