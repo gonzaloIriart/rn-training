@@ -8,7 +8,7 @@ export default class OtherScreen extends Component {
               <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Other Screen</Text>
                 <Button
-                  title="Go to Details... again"
+                  title="Go to Other... again"
                   onPress={() => this.props.navigation.push('Details')}
                 />
               </View>

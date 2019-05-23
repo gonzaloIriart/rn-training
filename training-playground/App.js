@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { Text, View, Button } from 'react-native';
 import {  createAppContainer,createBottomTabNavigator } from "react-navigation";
 import OtherScreen from './OtherScreen';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default class App extends React.Component {
   render() {
@@ -26,22 +27,34 @@ class HomeScreen extends React.Component {
 }
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 const AppNavigator = createBottomTabNavigator(
   {
-  Home: HomeScreen,
+  Form: HomeScreen,
   Other: OtherScreen
   },
   {
-    initialRouteName:'Home'
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ tintColor }) => {
+        const { routeName } = navigation.state;
+        let IconComponent = Ionicons;
+        let iconName = '';
+        if (routeName === 'Form') {
+          iconName = 'ios-archive';          
+        
+        } else if (routeName === 'Other') {
+          iconName = 'md-appstore';
+        }        
+        return <IconComponent name={iconName} size={25} color={tintColor} />;
+      }
+    })
+    ,tabBarOptions: {
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
+      },
+    },
+  {
+    initialRouteName:'Form'
   }
 );
 
