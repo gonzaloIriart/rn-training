@@ -1,15 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import OtherScreen from './OtherScreen';
 
 export default class App extends React.Component {
   render() {
+    return (      
+        <AppContainer />        
+    );
+  }
+}
+
+class HomeScreen extends React.Component {
+  render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Home Screen</Text>
+        <Button
+          title="Go to Other"
+          onPress={() => this.props.navigation.navigate('Other')}
+        />
       </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -19,3 +34,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+const AppNavigator = createStackNavigator(
+  {
+  Home: HomeScreen,
+  Other: OtherScreen
+  },
+  {
+    initialRouteName:'Home'
+  }
+);
+
+const AppContainer =  createAppContainer(AppNavigator);
