@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import {  Text, View, Button } from 'react-native';
 
-export default class OtherScreen extends Component {
-   
+
+export default class Form extends Component {
         render() {
             return (
               <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Other Screen</Text>
+                <Text>{this.props.title}</Text>
                 <Button
-                  title="Go to Other... again"
-                  onPress={() => this.props.navigation.push('Details')}
+                  title={this.props.buttonTitle}
+                  onPress ={this.props.onPress}
                 />
               </View>
             );
